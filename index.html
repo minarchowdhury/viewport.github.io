@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewport Dimensions Test</title>
+</head>
+
+<body>
+    <p>Viewport Width: <span id="viewportWidth"></span></p>
+    <p>Viewport Height: <span id="viewportHeight"></span></p>
+
+    <script>
+        // Function to update viewport dimensions
+        function updateViewportDimensions() {
+            const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            document.getElementById("viewportWidth").textContent = viewportWidth + "px";
+            document.getElementById("viewportHeight").textContent = viewportHeight + "px";
+        }
+
+        // Update viewport dimensions on page load and resize
+        window.addEventListener("load", updateViewportDimensions);
+        window.addEventListener("resize", updateViewportDimensions);
+    </script>
+</body>
+
+</html>
